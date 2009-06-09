@@ -1,0 +1,7 @@
+A simple RPC server for running Javascript.
+
+It uses Johnson and can hold multiple VM environments.
+
+Server is written using EventMachine and there is a client also.
+
+
