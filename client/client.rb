@@ -18,7 +18,7 @@ module JSS
         hash[:secret] = CONFIG[:secret] if CONFIG[:secret]
 
         string = hash.to_json + CR
-        #puts "sending #{string.length} bytes: #{string}"
+
            
         socket = TCPSocket.new CONFIG[:host], CONFIG[:port]
         socket.print(string)

@@ -27,7 +27,7 @@ module JSS
         raise e #reraise 
       end
 
-      logger.info "returned: #{ret.inspect}"
+      logger.info "returned: #{ret.to_json}"
       logger.info "took #{(Time.now - now)*1000}ms"
 
       ret
