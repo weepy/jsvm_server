@@ -23,12 +23,12 @@ module JSS
       begin
         ret = @johnson.evaluate(js)
       rescue Exception => e
-        logger.info "Caught exception: #{e.inspect}"
+        logger.info "   Caught exception: #{e.inspect}"
         raise e #reraise 
       end
 
-      logger.info "returned: #{ret.to_json}"
-      logger.info "took #{(Time.now - now)*1000}ms"
+      logger.info "   returned: #{ret.to_json}"
+      logger.info "   took #{(Time.now - now)*1000}ms"
 
       ret
     end

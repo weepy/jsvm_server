@@ -5,9 +5,9 @@ module JSS
     @@VMs = {}
     CR = "\0"
 
-    def initialize
+    def post_init
       @buffer = ''
-      JSS::logger.info "STARTING SERVER"
+      JSS::logger.info "New Client"
     end
     
     def receive_data(data)
@@ -66,6 +66,7 @@ module JSS
     end
   
     def create_VM key, context
+      JSS::logger.info "Creating new VM:#{key} with context:#{context} "
       @@VMs[key] = VM.new key, context 
     end
    
